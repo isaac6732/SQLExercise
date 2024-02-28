@@ -13,10 +13,10 @@ WHERE NOT price = 11.99;
 SELECT * FROM products
 ORDER BY price DESC;
 -- find all employees who don't have a middle initial
-SELECT * FROM emplayees
+SELECT * FROM employees
 WHERE MiddleInitial IS NULL;
 -- find distinct product prices
-SELECT distinct price  FROM product;
+SELECT distinct price  FROM products;
 -- find all employees whose first name starts with the letter ‘j’
 SELECT * FROM employees
 where FirstName LIKE 'a%';
@@ -30,8 +30,8 @@ WHERE OnSale = true;
 SELECT AVG (Price)
 FROM products;
 -- find all Geek Squad employees who don't have a middle initial
-SELECT * FROM employees
-WHERE title LIKE '%geek%squad%' AND MiddleInitial IS NULL;
+SELECT * FROM Employees
+WHERE Title = 'Geek Squad' AND (MiddleInitial IS NULL);
 -- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. 
 SELECT * FROM products
 WHERE stocklevel BETWEEN 500 AND 1200
